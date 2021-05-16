@@ -1,4 +1,5 @@
-## Welcome to GitHub Pages
+## Covid-19 Vaccine Hesitancy Analysis with Linear Regression
+# Kevin Lingelbach
 
 ```python
 import pandas as pd
