@@ -569,6 +569,8 @@ heatmap.set_yticklabels(heatmap.get_yticklabels(), rotation=45, horizontalalignm
 ```
 
 ![png](output_5_1.png)
+
+# The correlation matrix allowed me to learn several interesting things about the data. First, there was the obvious obvious prediction that came true of Strong Vaccine Hesitancy being highly correlated with Vaccine Hesitancy overall. Additionally, the CVAC level of concern for the vaccine rollout was highly correlated with the Social Vulnerability Index. The Social Vulnerability index was also heavily correlated with the percent of a County that is Black of Hispanic. Unlike I expected (considering the recent news of White, Conservative Americans being the most hesitant) the Percentage of Whites was actually negatively correlated with Vaccine hesitancy. However, vaccine hesitancy was still correlated with the percentage of a County that was non-Hispanic Black. 
     
 ```python
 model = DecisionTreeRegressor()
