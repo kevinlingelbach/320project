@@ -13,23 +13,14 @@ from sklearn.linear_model import LinearRegression
 
 ## Part 1: Data Collection
 
-# The dataset used in this project was information about vaccine hesitancy combined with various pieces of demographic and geographic information. 
-# The dataset was last updated on May 15th, 2021 and comes directly from data.gov
-# [Link to Data](https://catalog.data.gov/dataset/vaccine-hesitancy-for-covid-19-county-and-local-estimates-ed70f)
+###### The dataset used in this project was information about vaccine hesitancy combined with various pieces of demographic and geographic information. 
+###### The dataset was last updated on May 15th, 2021 and comes directly from data.gov
+###### [Link to Data](https://catalog.data.gov/dataset/vaccine-hesitancy-for-covid-19-county-and-local-estimates-ed70f)
 
 ```python
-# The dataset used in this project came from the website Kaggle, a popular site for downloading open source datasets. 
-# The data itself was collected from data.gov
-# This is a dataset that countains demographic data regarding the vaccine hesitancy and vaccination levels of every county in
-# in the US combined with various metrics about social vulnerability. 
-# https://www.kaggle.com/deepshah16/vaccine-hesitancy-for-covid19
-
 data = pd.read_csv('vaccine_hesitancy_new.csv')
 data.head()
 ```
-
-
-
 
 <div>
 <style scoped>
