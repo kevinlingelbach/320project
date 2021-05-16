@@ -639,7 +639,6 @@ fig, ax = plt.subplots(figsize=(10, 5))
 ax.set_xticklabels(labels, rotation=45, horizontalalignment='right')
 ax.bar(labels, importance)
 
-
 ax.set_title('Feature Importance')
 plt.show()
 ```
