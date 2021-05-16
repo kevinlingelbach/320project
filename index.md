@@ -516,17 +516,38 @@ ax.set_title('Percent non-Hispanic White by County')
 plt.show()
 ```
 
-![png](output_4_0.png)   
+![png](output_4_0.png)
+###### The estimated hesitancy is a fairly even distribution with a middle at around 20% of people and falling off at about the same rate on both sides. 
+
 ![png](output_4_1.png)
+###### Strong hesitancy however is different, it is centered at around 8% of people with a tail going off at the top for counties with more strong hesitancy. 
+
 ![png](output_4_2.png)
-![png](output_4_3.png)  
+###### Since social vulnerability index is likely a percentile measurement it makes sense for it to be perfectly even throughout and taper off on the ends. 
+
+![png](output_4_3.png)
+###### The same idea applies for SVAC Level of Concern for Vaccination Rollout.
+
 ![png](output_4_4.png)
+###### The level of vaccination per county is one of the best datapoints I have to work with. There is no estimation as it only gives us the facts of who has been vaccinated. Most counties seem to be clustered around 20% fully vaccinated but with a significant tail going off at the top of a small number of counties with way higher vaccination rates. However, there is a bulge at the bottom which indicates to me that most counties struggling with their vaccination rollout have vaccinated around the same amount of people and very few counties are located at the absolute bottom.  
+
 ![png](output_4_5.png)
+###### Percent Hispanic by County seems to be heavily clustered at around 10%, but with a massive tail of some counties with a significantly higher Hispanic population. 
+
 ![png](output_4_6.png)
+###### Percent non-Hispanic American Indians and Alaskan Natives are heavily clustered at around 2-3% of the population but with a tail that seems to go up to roughly 15%. 
+
 ![png](output_4_7.png)
+###### Percent non-Hispanic Asian by County are heavily clustered at around 2-3% of the population but with a tail that seems to go up to roughly 10%. An interesting thing to note here could be that American Indians and Alaskan Natives have similar numbers as Asian Americans despite having significantly lower population. Why? My hypothesis is that since the data is organized by County, Asian Americans are located in Heavily populated counties where the make up a similar portion as American Indians / Alaskan Natives but in places with significnatly lower population overall. American Indians could likely live in mostly small population areas. 
+
 ![png](output_4_8.png)
+###### Percent non-Hispanic Black seems to be heavily clustered at around 5% but with an enormous tail that is very wide at certain parts that stretches to almost 80%. This indicates that some counties with non-Hispanic Blacks are almost entirely compromised of non-Hispanic Blacks. 
+
 ![png](output_4_9.png)
+###### Percent non-Hispanic Native Hawaiian/Pacific Islander is very heavily clustered at or below 1%. There is a small tail that goes up to about 5%. 
+
 ![png](output_4_10.png)
+###### Percent of non-Hispanic Whites by county is most heavily clustered around 85-90% of the population but with a huge tail that goes all the way down to 0%. Many Whites seem to live in counties that are almost exclusively Whites but many also live in more Diverse areas. 
     
 ```python
 #Correlation Matrix
