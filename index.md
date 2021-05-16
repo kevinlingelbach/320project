@@ -654,8 +654,10 @@ print("Slope:", m[0])
     Slope: 0.07290005882032274
 
 
-
+###### Social Vulnerability Index
 ```python
+# Follow the same steps as above
+
 X = np.array(cleandata['Social Vulnerability Index (SVI)']).reshape((-1, 1))
 y = np.array(cleandata['Estimated hesitant'])
 
@@ -684,8 +686,10 @@ print("Slope:", m[0])
     Slope: 0.05506167108287122
 
 
-
+###### Percent non-Hispanic White
 ```python
+# Follow the same steps as above
+
 X = np.array(cleandata['Percent non-Hispanic White']).reshape((-1, 1))
 y = np.array(cleandata['Estimated hesitant'])
 
@@ -714,8 +718,10 @@ print("Slope:", m[0])
     Slope: -0.036596510203248354
 
 
-
+###### Percent non-Hispanic Black
 ```python
+# Follow the same steps as above
+
 X = np.array(cleandata['Percent non-Hispanic Black']).reshape((-1, 1))
 y = np.array(cleandata['Estimated hesitant'])
 
@@ -744,8 +750,10 @@ print("Slope:", m[0])
     Slope: 0.08265342968688802
 
 
-
+###### Percent Hispanic
 ```python
+# Follow the same steps as above
+
 X = np.array(cleandata['Percent Hispanic']).reshape((-1, 1))
 y = np.array(cleandata['Estimated hesitant'])
 
