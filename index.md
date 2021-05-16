@@ -1,4 +1,4 @@
-# Covid-19 Vaccine Hesistancy Analysis with Linear Regression 
+# Covid-19 Vaccine Hesistancy Analysis with Linear Regression Tutorial
 
 ## Part 0: Imports
 ###### I use several python libraries both to manipulate and graph the data. Mainly Pandas, Numpy, Matplotlib, and SKLearn.
@@ -782,3 +782,9 @@ print("Slope:", m[0])
     Slope: -0.10682711674765767
 
 ## Part 5: Conclusion
+
+####### These were some very interesting results. The one that surprised me the most and I cannot explain very well was the fact that Hispanics had not just a negative correlation but the strongest correlation altogether. The best explanation I have for this is the fact that there are simply so many more Hispanic Counties with a Small number of Hispanics so that heavily skews the data in the direction. There are significantly less counties in this dataset that are almost entirely Hispanic. In my opinion, this is the pitfall of using a dataset that is put together based on Counties. Even if the counties with more Hispanics contain the bulk of the hispanic population of the US there is no way to properly represent them. If I were to do a similar project again, I  would consider using a dataset that was simply raw population data such as polling or at least took population into account so I could weight counties with a higher population accordingly. 
+
+###### I was largely correct about both Social Vulnerability and CVAC Concern being strong indicators of vaccine hesitancy, but the Percent of Blacks in a county had a stronger correlation than both of them. I expected there to be a correlation between the percentage of Blacks and Vaccine hesitancy but for it not to be as strong as it was. 
+
+###### Lastly, I was mostly correct that Whites would have the weakest correlation out of all the groups, but I did not think it would be a positive correlation. 
