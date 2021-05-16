@@ -606,7 +606,10 @@ plt.show()
 ```
     
 ![png](output_6_1.png)
-    
+
+###### This yielded very interesting results. As expected, the CVAC Level of Concern showed up as clearly the most important feature for determining vaccine hesitancy, indicating to me that it is a reliable metric. Additionally, the percent of non-Hispanic Asians and the Percent of non-Hispanic blacks also stood out as important features in determining vaccine hesitancy.
+
+## Part 4: Hypothesis Testing and Machine Learning
 
 ```python
 cleandata = data.dropna()
