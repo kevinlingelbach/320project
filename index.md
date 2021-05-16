@@ -1,6 +1,6 @@
 # Covid-19 Vaccine Hesistancy Analysis with Linear Regression 
 
-## Part 0. Imports
+## Part 0: Imports
 ###### I use several python libraries both to manipulate and graph the data. Mainly Pandas, Numpy, Matplotlib, and SKLearn.
 ```python
 import pandas as pd
