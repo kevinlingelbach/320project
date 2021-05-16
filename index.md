@@ -611,20 +611,27 @@ plt.show()
 
 ## Part 4: Hypothesis Testing and Machine Learning
 
+###### Hypothesis: Given the information I have so far, I hypothesize that SVAC Level of Concern for Vaccination Rollout will be very strongly correlated with vaccine hesitancy. I also think Social Vulnerability Index will be strongly correlated with vaccine hesitancy. I also think that both non-Hispanic Black and Hispanic Counties will have a fairly strong correlation with vaccine hesitancy. Lastly, I think that Counties with Whites will have a very weak positive correlation with vaccine hesitancy. 
+
+###### I decide to clean up the data so I drop anything with a nan in the row to make performing Machine Learning easier. 
 ```python
 cleandata = data.dropna()
 ```
 
-
+###### CVAC Level of Concern
 ```python
+# Reshape the data so it can be used in a linear regression
 X = np.array(cleandata['CVAC level of concern for vaccination rollout']).reshape((-1, 1))
 y = np.array(cleandata['Estimated hesitant'])
 
+# Fit the model
 model = LinearRegression().fit(X, y)
 
+# Get slope and intercept for graphing
 b = model.intercept_
 m = model.coef_
 
+# Plot a scatter plot for the datapoints and Line representing the linear regression
 ig, ax = plt.subplots(figsize=(10, 10))
 ax.plot(X, y, 'o')
 ax.plot(X, m*X + b)
@@ -633,6 +640,8 @@ ax.set_xlabel('CVAC Level of Concern')
 ax.set_ylabel('Hesitancy')
 
 plt.show()
+
+# Print out our slope for the strength of the correlation
 print("Slope:", m[0])
 ```
 
