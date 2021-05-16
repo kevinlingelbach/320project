@@ -16,6 +16,7 @@ from sklearn.linear_model import LinearRegression
 ###### The dataset used in this project was information about vaccine hesitancy combined with various pieces of demographic and geographic information. The dataset was last updated on May 15th, 2021 and comes directly from [data.gov](https://catalog.data.gov/dataset/vaccine-hesitancy-for-covid-19-county-and-local-estimates-ed70f).
 
 ```python
+# Import the csv using pandas and then use head to display the beginning of the dataset. 
 data = pd.read_csv('vaccine_hesitancy_new.csv')
 data.head()
 ```
@@ -180,21 +181,18 @@ data.head()
 </table>
 </div>
 
-
-
+## Part 2: Data Management
+###### I decided to focus more on the demographic side for this project as it would be easier to perform a mathematical analysis on so I decdied to remove the unnecessary columns from the dataset. I also got rid of the FIPS code and State Code as they are not needed.   
 
 ```python
 # Cleaning up the data a little bit to hone in on demographic information
 data.drop(columns=['FIPS Code', 'Geographical Point', 'State Code', 'County Boundary', 'State Boundary'], inplace=True)
 ```
 
-
+###### Here I used the Pandas describe function to get a picture of what each of the features in the dataset looks like.
 ```python
 data.describe(include='all')
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -435,7 +433,9 @@ data.describe(include='all')
 </div>
 
 
+## Part 3: Exploratory Data Analysis
 
+###### Below is code to print out the violin plot for each feature so I could get a better look at the demographic infromation rather than just looking at the raw numbers from the describe function above. 
 
 ```python
 fig, ax = plt.subplots(figsize=(5, 5))
