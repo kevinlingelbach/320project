@@ -1,4 +1,4 @@
-## Covid-19 Vaccine Hesitancy Analysis with Linear Regression
+## Covid-19 Vaccine Hesistancy Analysis with Linear Regression 
 
 ```python
 import pandas as pd
@@ -640,7 +640,6 @@ labels = ['Social Vulnerability Index (SVI)', 'CVAC level of concern for vaccina
 fig, ax = plt.subplots(figsize=(10, 5))
 ax.set_xticklabels(labels, rotation=45, horizontalalignment='right')
 ax.bar(labels, importance)
-
 
 ax.set_title('Feature Importance')
 plt.show()
