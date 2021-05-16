@@ -764,8 +764,4 @@ print("Slope:", m[0])
 
     Slope: -0.10682711674765767
 
-
-
-```python
-
-```
+## Part 5: Conclusion
