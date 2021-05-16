@@ -548,44 +548,28 @@ plt.show()
 
 ![png](output_4_10.png)
 ###### Percent of non-Hispanic Whites by county is most heavily clustered around 85-90% of the population but with a huge tail that goes all the way down to 0%. Many Whites seem to live in counties that are almost exclusively Whites but many also live in more Diverse areas. 
-    
+
+###### Next I use the correlation function that is provided by Pandas to find the correlation between the various features in the dataset. 
+
 ```python
-#Correlation Matrix
 plt.subplots(figsize = (10,10))
 
 corr = data.corr()
+
+# The Numpy triu function is used to make it so the matrix only shows one half of itself (the other side would simply be a duplicate)
 matrix = np.triu(corr)
+
+# Using the Seaborn heatmap with a red-blue color scheme to graph the data
 heatmap = sns.heatmap(corr, cmap='RdBu', linewidths=1, mask=matrix)
 
+# Set titles and labels
 heatmap.set_title("Correlation Matrix between Features")
 heatmap.set_xticklabels(heatmap.get_xticklabels(), rotation=45, horizontalalignment='right')
 heatmap.set_yticklabels(heatmap.get_yticklabels(), rotation=45, horizontalalignment='right')
 ```
 
-
-
-
-    [Text(0, 0.5, 'Estimated hesitant'),
-     Text(0, 1.5, 'Estimated strongly hesitant'),
-     Text(0, 2.5, 'Social Vulnerability Index (SVI)'),
-     Text(0, 3.5, 'CVAC level of concern for vaccination rollout'),
-     Text(0, 4.5, 'Percent adults fully vaccinated against COVID-19'),
-     Text(0, 5.5, 'Percent Hispanic'),
-     Text(0, 6.5, 'Percent non-Hispanic American Indian/Alaska Native'),
-     Text(0, 7.5, 'Percent non-Hispanic Asian'),
-     Text(0, 8.5, 'Percent non-Hispanic Black'),
-     Text(0, 9.5, 'Percent non-Hispanic Native Hawaiian/Pacific Islander'),
-     Text(0, 10.5, 'Percent non-Hispanic White')]
-
-
-
-
-    
 ![png](output_5_1.png)
     
-
-
-
 ```python
 model = DecisionTreeRegressor()
 
