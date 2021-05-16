@@ -571,20 +571,32 @@ heatmap.set_yticklabels(heatmap.get_yticklabels(), rotation=45, horizontalalignm
 ![png](output_5_1.png)
 
 ###### The correlation matrix allowed me to learn several interesting things about the data. First, there was the obvious obvious prediction that came true of Strong Vaccine Hesitancy being highly correlated with Vaccine Hesitancy overall. Additionally, the CVAC level of concern for the vaccine rollout was highly correlated with the Social Vulnerability Index. The Social Vulnerability index was also heavily correlated with the percent of a County that is Black of Hispanic. Unlike I expected (considering the recent news of White, Conservative Americans being the most hesitant) the Percentage of Whites was actually negatively correlated with Vaccine hesitancy. However, vaccine hesitancy was still correlated with the percentage of a County that was non-Hispanic Black. 
-    
+
+###### Next, I wanted to find the importance of various features in the dataset using a DecisionTreeRegressor when looking at their impact on vaccine hesitancy. 
 ```python
 model = DecisionTreeRegressor()
 
+# Get rid of any nans within the data
 X = data.dropna()
+
+# Grab the estimated hesitant column as y
 y = X['Estimated hesitant']
 
+# Drop the columns that won't be needed. I decided to get rid of the remaining geographical data as I thought it wasn't crucial for me and the estimated strongly hesitant 
+# out of fear it would dominate the other ones considering how much it was correlated with normal hesitancy. I also got rid of the categories considering they basically
+# just put names on continuous data we already have so there was no need to transform it. 
 X = X.drop(columns=['State', 'County Name', 'Estimated hesitant', 'SVI Category', 'CVAC Level Of Concern', 'Estimated strongly hesitant'])
 
+# Fit the model
 model.fit(X, y)
 
+# Grab the importances of each feature
 importance = model.feature_importances_
+
+# Labels for graphing
 labels = ['Social Vulnerability Index (SVI)', 'CVAC level of concern for vaccination rollout', 'Percent adults fully vaccinated against COVID-19', 'Percent Hispanic', 'Percent non-Hispanic American Indian/Alaska Native', 'Percent non-Hispanic Asian', 'Percent non-Hispanic Black', 'Percent non-Hispanic Native Hawaiian/Pacific Islander', 'Percent non-Hispanic White']
 
+# Graph the feature importance in a bar plot
 fig, ax = plt.subplots(figsize=(10, 5))
 ax.set_xticklabels(labels, rotation=45, horizontalalignment='right')
 ax.bar(labels, importance)
